@@ -17,9 +17,9 @@
         </v-btn>
       </v-snackbar>
     
-      <v-content>
+      <v-main>
         <router-view></router-view>
-      </v-content>
+      </v-main>
     </v-container>
   </v-app>
 </template>
