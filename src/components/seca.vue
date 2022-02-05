@@ -250,6 +250,7 @@ export default {
             this.phone = ''
             this.whatsapp = ''
             this.category = ''
+        this.error = ''
             this.dialog2 = false
             this.dialog = false
       },
