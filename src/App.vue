@@ -2,20 +2,7 @@
   <v-app>
     <v-container fluid class="pa-0">
       <Offline @detected-condition="handleConnectivityChange"> </Offline>
-   <v-snackbar
-        :value="snackbar.status"
-        :timeout="5000"
-        :color="snackbar.color"
-        bottom class="font-weight-bold"
-        left x-small
-        multi-line
-        style="z-index:99999"
-      >
-        {{ snackbar.text }}
-        <v-btn dark icon @click="$store.dispatch('status1', false)">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </v-snackbar>
+  
     
       <v-main>
         <router-view></router-view>
@@ -87,12 +74,7 @@ export default {
     };
   },
   computed: {
-    snackbar() {
-      return this.$store.getters.getSnackbar;
-    },
-    snackbar2() {
-      return this.$store.getters.getSnackbar2;
-    }
+ 
   },
   mounted(){
   },
@@ -103,19 +85,7 @@ export default {
         // this.$router.push("/offlinepage");
       }
     },
-    action(x, y) {
-      if (x === 1) {
-        this.$store.dispatch("order", {
-          id: y,
-          action: null
-        });
-      } else if (x === 2) {
-        this.$router.push("/adminedit");
-      } else {
-        this.$router.push("/");
-      }
-      this.$store.dispatch("status2", false);
-    }
+  
   } 
 };
 </script>
