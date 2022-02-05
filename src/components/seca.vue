@@ -75,6 +75,13 @@
            All Nominees/Candidates <strong class="orange--text text--darken-3">Must Be Active</strong> in Any Category he or She Will Be Nominated In and Also <strong class="orange--text text--darken-3">Must</strong> Be A Student of Any Of the Institutions in The South East.
            </p>
     </v-card>
+    <v-dialog persistent max-width="400" v-model="dialog2">
+        <v-card class="pa-4 text-center" v-if="dialog2">
+          <p class="headline">Your Nomination Has Been Submitted, Thank You.</p>
+          <p>press close to nominate another person</p>
+<v-btn @click="close()" rounded :disabled="loading"  large color="grey darken-3" class="font-weight-bold white--text mx-1 mb-4 my-4">close</v-btn>
+        </v-card>
+    </v-dialog>
     <v-dialog persistent max-width="400" v-model="dialog">
         <v-card v-if="dialog">
             <v-form  onSubmit="return false;" class="pa-4 text-center" ref="form">
@@ -158,6 +165,7 @@ export default {
   data() {
     return {
         loading: false,
+        dialog2: false,
         dialog: false,
         category: '',
         error: '',
@@ -240,6 +248,7 @@ export default {
             this.phone = ''
             this.whatsapp = ''
             this.category = ''
+            this.dialog2 = false
             this.dialog = false
       },
       submit(){
@@ -257,8 +266,7 @@ export default {
             category: this.category
         }).then((res)=>{
             console.log(res)
-      alert('Your Nomination Has Been Submited, Thank You.')
-               this.close()
+      this.dialog2 = true
                this.loading = false
         }).catch(()=>{
                this.close()
