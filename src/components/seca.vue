@@ -244,7 +244,7 @@ export default {
               this.loading = true
               this.error = ''
      
-        axios.post('https://foodrepublic.herokuapp.com/seca', {
+        axios.post('https://foodrepublic.herokuapp.com/api/seca', {
             institution: this.school,
             email: this.email,
             name: this.name,
