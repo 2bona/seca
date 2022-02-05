@@ -1,8 +1,8 @@
 <template>
   <v-card flat tile color="">
-    <v-content style="overflow-x:hidden">
+    <v-main style="overflow-x:hidden">
       <router-view></router-view>
-    </v-content>
+    </v-main>
   </v-card>
 </template>
 <script>
@@ -11,7 +11,6 @@ export default {
     return {};
   },
   mounted(){
-        this.$store.dispatch("loadVendor")
   }
 };
 </script>
