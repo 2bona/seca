@@ -37,7 +37,7 @@
 </v-layout>
     </v-flex>
       </v-card>
-    <v-card max-width="500px"  min-height="700px"  flat tile class="ma-auto pa-4">
+    <v-card max-width="500px"  min-height="750px"  flat tile class="ma-auto pa-4">
      <v-select
           @change="openDialog"
           v-model="sugModel"
