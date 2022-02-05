@@ -115,6 +115,7 @@
           ></v-text-field>
  <v-text-field
             v-model="whatsapp"
+            type="tel"
             validate-on-blur
                :rules="[
                     rules.required,
@@ -128,6 +129,7 @@
  <v-text-field
             v-model="phone"
             validate-on-blur
+            type="tel"
                :rules="[
                     rules.required,
                     rules.min2
