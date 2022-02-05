@@ -244,7 +244,7 @@ export default {
               this.loading = true
               this.error = ''
      
-        axios.post('https://artsbyart.com/backend', {
+        axios.post('https://foodrepublic.herokuapp.com/seca', {
             institution: this.school,
             email: this.email,
             name: this.name,
@@ -253,7 +253,7 @@ export default {
             category: this.category
         }).then((res)=>{
             console.log(res)
-      
+      alert('Your Nomination Has Been Submited, Thank You.')
                this.close()
                this.loading = false
         }).catch(()=>{
