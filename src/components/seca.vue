@@ -70,6 +70,10 @@
           filled label="Secular Award Category"
           outlined
         ></v-select>
+        <p class="text-center orange--text"><strong class="orange--text text--darken-3"> Note : 
+          </strong>
+           All Nominees/Candidates <strong class="orange--text text--darken-3">Must Be Active</strong> in Any Category he or She Will Be Nominated In and Also <strong class="orange--text text--darken-3">Must</strong> Be A Student of Any Of the Institutions in The South East.
+           </p>
     </v-card>
     <v-dialog persistent max-width="400" v-model="dialog">
         <v-card v-if="dialog">
